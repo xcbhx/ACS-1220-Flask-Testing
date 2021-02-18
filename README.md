@@ -14,10 +14,10 @@ Navigate to the project folder:
 cd flask-testing
 ```
 
-Install Pytest if it's not already installed:
+Install unittest if it's not already installed:
 
 ```bash
-pip3 install pytest
+pip3 install unittest
 ```
 
 ## Part 1: String Tests
@@ -25,7 +25,7 @@ pip3 install pytest
 Run the tests:
 
 ```bash
-pytest
+python3 -m unittest discover
 ```
 
 All of the tests should pass, but that's because they're not all filled out yet!
@@ -51,11 +51,3 @@ Route tests are similar to unit tests, but they can be a little more broad as so
 Go to `route_tests/test_app.py` and fill in the TODOs to test the route functions. It may be helpful to first manually test these in your browser so that you can understand how they are supposed to work.
 
 For edge cases, make sure you pick a scenario at the "edge" of possible scenarios! That could mean testing with an empty string, 0, or 1. See if you can come up with more!
-
-## Stretch Challenges
-
-Write some tests for your Homework 3 or Homework 4 code. See if you can "mock" out the API calls & database operations using the [Pytest mocker](https://pypi.org/project/pytest-mock/) plugin.
-
-## Submission
-
-Submit your work via [Gradescope](https://gradescope.com) for Homework 5!
