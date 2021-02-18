@@ -1,6 +1,7 @@
 from unittest import TestCase
 
 from .string_functions import *
+
 class StringTests(TestCase):
     def test_greeting_jeremy(self):
         """Test for greet_by_name"""
@@ -63,7 +64,3 @@ class StringTests(TestCase):
         expected = ''
         actual = find_longest_word('')
         self.assertEqual(actual, expected)
-
-# run the tests
-if __name__ == '__main__':
-    unittest.main()
