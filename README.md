@@ -17,7 +17,7 @@ cd flask-testing
 Install unittest if it's not already installed:
 
 ```bash
-pip3 install unittest
+pip3 install flask_unittest
 ```
 
 ## Part 1: String Tests
