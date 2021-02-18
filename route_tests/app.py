@@ -1,7 +1,5 @@
 from flask import Flask, request
 
-from unit_tests.string_functions import *
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -49,6 +47,10 @@ def show_froyo_results():
     toppings = request.args.get('toppings')
     return f'You ordered {users_froyo_flavor} flavored Fro-Yo with toppings {toppings}!'
 
+
+def reverse(str):
+    """Reverses the characters in a string."""
+    return str[::-1]
 
 @app.route('/reverse_message')
 def reverse_message_form():

@@ -32,22 +32,13 @@ class ColorTests(TestCase):
         self.assertEqual(expected_page_text, result_page_text)
 
     def test_color_results_light_green(self):
-        result = app.test_client().get('/color_results?color=light%20green')
-
-        self.assertEqual(result.status_code, 200)
-
-        result_page_text = result.get_data(as_text=True)
-        expected_page_text = 'Wow, light green is my favorite color, too!'
-        self.assertEqual(expected_page_text, result_page_text)
+        # TODO: Fill in this function to test the color route with the color 
+        # 'light green'.
+        pass
 
     def test_color_results_empty(self):
-        result = app.test_client().get('/color_results?color=')
-
-        self.assertEqual(result.status_code, 200)
-
-        result_page_text = result.get_data(as_text=True)
-        expected_page_text = 'You didn\'t specify a color!'
-        self.assertEqual(expected_page_text, result_page_text)
+        # TODO: Fill in this function to test the color route with no color.
+        pass
 
 
 #######################
