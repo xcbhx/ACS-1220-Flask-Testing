@@ -20,7 +20,7 @@ class StringTests(TestCase):
     def test_greeting_dani(self):
         """Test for greet_by_name"""
         expected = 'Hello, Dani!'
-        actual = greet_by_name('Meredith')
+        actual = greet_by_name('Dani')
         self.assertEqual(actual, expected)
 
     def test_reverse_long(self):
