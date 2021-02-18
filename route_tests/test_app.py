@@ -13,11 +13,11 @@ class IndexTests(TestCase):
     def test_index(self):
         """Test that the index page shows "Hello, World!" """
         res = app.test_client().get('/')
-        assert res.status_code == 200
+        self.assertEqual(res.status_code, 200)
 
         result_page_text = res.get_data(as_text=True)
         expected_page_text = "Hello, World!"
-        assert expected_page_text == result_page_text
+        self.assertEqual(expected_page_text, result_page_text)
 
 
 class ColorTests(TestCase):
@@ -25,29 +25,29 @@ class ColorTests(TestCase):
     def test_color_results_blue(self):
         result = app.test_client().get('/color_results?color=blue')
 
-        assert result.status_code == 200
+        self.assertEqual(result.status_code, 200)
 
         result_page_text = result.get_data(as_text=True)
         expected_page_text = 'Wow, blue is my favorite color, too!'
-        assert expected_page_text == result_page_text
+        self.assertEqual(expected_page_text, result_page_text)
 
     def test_color_results_light_green(self):
         result = app.test_client().get('/color_results?color=light%20green')
 
-        assert result.status_code == 200
+        self.assertEqual(result.status_code, 200)
 
         result_page_text = result.get_data(as_text=True)
         expected_page_text = 'Wow, light green is my favorite color, too!'
-        assert expected_page_text == result_page_text
+        self.assertEqual(expected_page_text, result_page_text)
 
     def test_color_results_empty(self):
         result = app.test_client().get('/color_results?color=')
 
-        assert result.status_code == 200
+        self.assertEqual(result.status_code, 200)
 
         result_page_text = result.get_data(as_text=True)
         expected_page_text = 'You didn\'t specify a color!'
-        assert expected_page_text == result_page_text
+        self.assertEqual(expected_page_text, result_page_text)
 
 
 #######################
@@ -86,10 +86,10 @@ class MessageTests(TestCase):
             'message': 'Hello World'
         }
         res = app.test_client().post('/message_results', data=form_data)
-        assert res.status_code == 200
+        self.assertEqual(res.status_code, 200)
 
         result_page_text = res.get_data(as_text=True)
-        assert 'dlroW olleH' in result_page_text
+        self.assertIn('dlroW olleH', result_page_text)
 
     def test_message_results_scenario2(self):
         # TODO: Fill in this function to test the message_results route under 
