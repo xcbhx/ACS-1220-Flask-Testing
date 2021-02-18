@@ -20,6 +20,10 @@ class IndexTests(TestCase):
         self.assertEqual(expected_page_text, result_page_text)
 
 
+#######################
+# Favorite Color Tests
+#######################
+
 class ColorTests(TestCase):
     """Tests for the Color route."""
     def test_color_results_blue(self):

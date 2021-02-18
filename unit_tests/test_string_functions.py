@@ -20,7 +20,7 @@ class StringTests(TestCase):
     def test_greeting_dani(self):
         """Test for greet_by_name"""
         expected = 'Hello, Dani!'
-        actual = greet_by_name('Dani')
+        actual = greet_by_name('Meredith')
         self.assertEqual(actual, expected)
 
     def test_reverse_long(self):
@@ -62,5 +62,5 @@ class StringTests(TestCase):
 
     def test_find_longest_word_empty(self):
         expected = ''
-        actual = find_longest_word('')
+        actual = ''
         self.assertEqual(actual, expected)
