@@ -17,50 +17,51 @@ class StringTests(TestCase):
         # passes
         self.assertEqual(actual, expected)
 
-    def test_greeting_dani(self):
+    def test_greeting_ceina(self):
         """Test for greet_by_name"""
-        expected = 'Hello, Dani!'
-        actual = greet_by_name('Dani')
+        expected = 'Hello, Ceina!'
+        actual = greet_by_name('Ceina')
         self.assertEqual(actual, expected)
 
     def test_reverse_long(self):
         """Test reversing a long string."""
-        expected = ''
-        actual = ''
+        expected = 'gnitsetksalf'
+        actual = reverse('flasktesting')
         self.assertEqual(actual, expected)
 
     def test_reverse_short(self):
         """Test reversing a short string."""
-        expected = ''
-        actual = ''
+        expected = 'yeh'
+        actual = reverse('hey')
         self.assertEqual(actual, expected)
 
     def test_reverse_words_long(self):
         """Test reversing words in a long string."""
-        expected = ''
-        actual = ''
+        expected = 'lab testing flask'
+        actual = reverse_words('flask testing lab')
         self.assertEqual(actual, expected)
 
     def test_reverse_words_short(self):
         """Test reversing words in a short string."""
-        expected = ''
-        actual = ''
+        expected = 'there hi'
+        actual = reverse_words('hi there')
         self.assertEqual(actual, expected)
 
     def test_sarcastic_long(self):
         """Test sarcastic-ifying a long string."""
-        expected = ''
-        actual = ''
+        expected = 'fLaSkTeStInGlAb'
+        actual = sarcastic('flasktestinglab')
         self.assertEqual(actual, expected)
 
     def test_sarcastic_short(self):
         """Test sarcastic-ifying a short string."""
-        expected = ''
-        actual = ''
+        expected = 'bRyAn'
+        actual = sarcastic('bryan')
         self.assertEqual(actual, expected)
 
 
     def test_find_longest_word_empty(self):
+        """Test finding the longest word in an empty string."""
         expected = ''
-        actual = ''
+        actual = find_longest_word('')
         self.assertEqual(actual, expected)
